@@ -13,7 +13,7 @@ sourceCompatibility = '11'
 		compileOnly {
 			extendsFrom annotationProcessor
 } }
-//lombok 설정 추가 끝
+//lombok 설정 추가 끝rr
 
 repositories {
 	mavenCentral()
