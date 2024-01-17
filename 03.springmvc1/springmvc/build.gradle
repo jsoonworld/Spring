@@ -9,6 +9,11 @@ version = '0.0.1-SNAPSHOT'
 
 java {
 	sourceCompatibility = '17'
+
+	// Configure the compileJava task to use the -parameters flag
+	tasks.compileJava {
+		options.compilerArgs << '-parameters'
+	}
 }
 
 configurations {
