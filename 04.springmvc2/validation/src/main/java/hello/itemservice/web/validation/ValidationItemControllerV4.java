@@ -2,8 +2,6 @@ package hello.itemservice.web.validation;
 
 import hello.itemservice.domain.item.Item;
 import hello.itemservice.domain.item.ItemRepository;
-import hello.itemservice.domain.item.SaveCheck;
-import hello.itemservice.domain.item.UpdateCheck;
 import hello.itemservice.web.validation.form.ItemSaveForm;
 import hello.itemservice.web.validation.form.ItemUpdateForm;
 import lombok.RequiredArgsConstructor;
@@ -46,7 +44,7 @@ public class ValidationItemControllerV4 {
     }
 
     @PostMapping("/add")
-    public String addItem(@Validated @ModelAttribute("item") ItemformSaveForm form, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
+    public String addItem(@Validated @ModelAttribute("item") ItemSaveForm form, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
 
         //특정 필드가 아닌 복합 룰 검증
         if (form.getPrice() != null && form.getQuantity() != null) {

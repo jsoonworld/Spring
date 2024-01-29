@@ -1,12 +1,16 @@
 package hello.itemservice.web.validation.form;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.Range;
 import org.springframework.lang.NonNull;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotBlank;
 
 @Data
 public class ItemSaveForm {
 
-    @NonNull
+    @NotBlank
     private String itemName;
 
     @NonNull
